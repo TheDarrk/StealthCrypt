@@ -11,7 +11,7 @@ app = FastAPI()
 # Allow CORS from React frontend during development
 origins = [
     "http://localhost:3000",  # frontend dev server
-    "http://localhost:8000",  # backend server
+    "https://stealth-crypt.vercel.app",  # backend server
 ]
 
 app.add_middleware(

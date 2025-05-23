@@ -1,0 +1,247 @@
+/* Container */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* changed from height: 100vh to allow scroll */
+  width: 100%;
+  background-color: #121212; /* dark background */
+  color: #e0e0e0; /* light text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+/* Title */
+.landing-title {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: #bb86fc;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-size: 2rem;
+  max-width: 900px;
+  margin-bottom: 30px;
+  color: #cccccc;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* Button */
+.landing-button {
+  background-color: #7f39fb;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 3px 25px rgba(127, 57, 251, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.landing-button:hover {
+  background-color: #5a00e0;
+  transform: scale(1.05);
+  box-shadow: 0 3px 25px rgba(90, 0, 224, 0.7);
+}
+
+/* Info boxes container */
+.info-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Each info box */
+.info-box {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 25px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+  flex: 1 1 280px;
+  max-width: 360px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  perspective: 800px;
+}
+
+/* Info box titles */
+.info-box h3 {
+margin-top: 0;
+margin-bottom: 10px;
+  color: #bb86fc;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+/* Hover effect */
+.info-box:hover {
+  transform: rotateY(8deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 0px 30px rgba(123, 83, 235, 0.8);
+  background-color: #2a2a2a;
+}
+
+/* Typewriter animation for bullet points */
+.typewriter ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.typewriter ul li {
+  opacity: 0;
+  animation: typeIn 0.5s ease forwards;
+  transform: translateX(-10px);
+}
+
+.typewriter ul li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.typewriter ul li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.typewriter ul li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.typewriter ul li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.typewriter ul li:nth-child(5) {
+  animation-delay: 1.5s;
+}
+/* Add more if needed */
+
+@keyframes typeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.landing-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: fadeInLogo 1s unset ;
+}
+
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Background GIF with gradient fade */
+.bg-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%; /* or 50%, depending on how much left side you want */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+
+  /* Fading effect from left to right */
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+
+/* Make sure content appears above background */
+.landing-page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Optional, prevents bg overflow */
+}
+.typewriter-effect {
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: #00ffcc;
+  margin-top: 18px;
+  display: inline-block;
+}
+.fixed-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.typewriter-word {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  display: inline-block;
+  width: 120px;     /* ⬅️ Fixed width prevents jumping */
+  text-align: left; /* ⬅️ Align words to start */
+  white-space: nowrap;
+}
+.sentence-container {
+  display: inline-block;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.typewriter-wrapper {
+  display: inline-block;
+  position: relative;
+  min-width: 120px; /* enough for longest word */
+  height: 1.5em;
+  vertical-align: bottom;
+  color: #00ffcc;
+  font-weight: bold;
+}
+.landing-subtitle {
+  color: #ffffff;
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.typewriter-sentence {
+  display: inline-flex;
+  align-items: baseline; /* aligns text to same baseline */
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.typewriter-word {
+  display: inline-block;
+  min-width: 100px; /* Adjust to longest word */
+  margin-left: 8px;
+  padding-left: 4px;
+  color: #808080;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}

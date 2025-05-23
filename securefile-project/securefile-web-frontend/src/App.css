@@ -1,0 +1,259 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+.app-page {
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;         /* remove background color */
+  border: none;             /* remove border if any */
+  box-shadow: none;         /* remove any shadow */
+  
+}
+
+/* Title */
+.app-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #bb86fc; /* soft purple accent */
+  font-weight: 700;
+  font-size: 3.9rem;
+}
+
+/* Mode Buttons */
+.mode-switcher {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center; /* center horizontally */
+  gap: 20px; /* vertical spacing */
+  margin-bottom: 30px;
+}
+
+
+
+.mode-button {
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: 2px solid #bb86fc;
+  background-color: #1f1f1f;
+  color: #bb86fc;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mode-button:hover {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.mode-button.active {
+  background-color: #7f39fb;
+  color: #121212;
+  cursor: default;
+  border-color: #7f39fb;
+}
+
+/* Card container */
+.card {
+  width: 100%; /* Make the card full-width */
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 0px 40px; /* Add left/right padding for spacing */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+  margin-bottom: 1.8rem;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: stretch; /* Ensure content aligns left */
+  box-sizing: border-box;
+}
+
+
+/* File input */
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #bb86fc;
+  margin-bottom: 30px;
+  user-select: none;
+  border: 2px solid #bb86fc;
+  padding: 8px 15px;
+  border-radius: 6px;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+  
+}
+
+.file-label:hover {
+  
+  background-color: #333333;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.file-choose {
+  font-size: 1rem;
+}
+
+.file-name {
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  align-self: flex-start;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.text-input,
+textarea.text-input {
+  width: 60%;
+  display: block;
+ 
+  text-align: left;
+  margin-left: px;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  border: 2px solid #555555;
+  border-radius: 6px;
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease;
+  
+  resize: vertical; /* optional, allows vertical resize */
+  line-height: 1.; /* adjust line height for better spacing */
+}
+
+.text-input:focus,
+textarea.text-input:focus {
+  text-align: left;
+  width: 100%;
+  margin-left: 0px;
+  display: block;
+  outline: none;
+  border-color: #bb86fc;
+  box-shadow: 0 0 8px #bb86fcaa;
+}
+
+
+/* Action button */
+.action-button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #7f39fb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -10px;
+}
+
+.action-button:hover {
+  background-color: #5a00e0;
+}
+.action-button:disabled {
+  background-color: #3a007f;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* Status message */
+.status-message {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #22c55e; /* green for success */
+  min-height: 24px;
+  text-align: center;
+}
+
+/* Download section */
+.download-section {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.download-link {
+  background-color: #7f39fb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.download-link:hover {
+  background-color: #5a00e0;
+}
+
+/* Key display */
+.key-display {
+  margin-top: 20px;
+  
+  padding: 15px 20px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #ddd;
+  cursor: pointer;
+  user-select: all;
+} 
+.typed-line {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.fixed-text {
+  margin-left: 3.5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 30px; /* or any spacing you want */
+}
+
+.typed-text {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #bb86fc; /* or match with your theme */
+}

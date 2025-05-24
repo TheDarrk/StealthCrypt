@@ -227,6 +227,10 @@ export default function App() {
             className="text-input"
             spellCheck="false"
           />
+              <footer className="app-footer">
+  <p>🔒 Built by Ankit Kumar verma</p>
+</footer>
+
         </div>
         <button onClick={handleDecrypt} className="action-button">
           Decrypt

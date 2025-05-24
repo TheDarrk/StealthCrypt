@@ -259,10 +259,8 @@ textarea.text-input:focus {
 }
 .app-footer {
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  
+  font-size: 0.5rem;
   color: #888;
-  background-color: #121212;
-  border-top: 1px solid #333;
-  margin-top: 2rem;
+  
 }

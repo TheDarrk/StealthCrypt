@@ -105,7 +105,7 @@ export default function App() {
     formData.append("key", decryptKey);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/decrypt", {
+      const response = await fetch("https://stealthcrypt.onrender.com/decrypt", {
         method: "POST",
         body: formData,
       });

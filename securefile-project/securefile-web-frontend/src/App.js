@@ -47,7 +47,7 @@ export default function App() {
     formData.append("file", encryptFile);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/encrypt", {
+      const response = await fetch("https://stealthcrypt.onrender.com/encrypt", {
         method: "POST",
         body: formData,
       });
